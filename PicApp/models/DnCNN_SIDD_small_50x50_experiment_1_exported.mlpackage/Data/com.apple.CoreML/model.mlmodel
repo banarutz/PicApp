@@ -1,2767 +1,0 @@
-Ÿ
-
-x*
-
-22†ÄR
-sub*
-
-22†Ä¢≠¢+
-$com.github.apple.coremltools.version8.1¢@
-+com.github.apple.coremltools.source_dialectTorchExport::ATEN¢9
-#com.github.apple.coremltools.sourcetorch==2.5.1+cu124≤êÀñ…
-mainå…
-#
-x
-
-
-
-2
-2CoreML5⁄»
-CoreML5Õ»subh
-const
-conv2d_pad_type_0
-*'
-name
-
-"
-conv2d_pad_type_0*
-val
-
-
-"
-customl
-const
-conv2d_pad_0
-
-
-*"
-name
-
-"
-conv2d_pad_0*!
-val
-
-
-
-
-
-r
-const 
-conv2d_strides_0
-
-
-*
-val
-
-
-
-
-*&
-name
-
-"
-conv2d_strides_0v
-const"
-conv2d_dilations_0
-
-
-*
-val
-
-
-
-
-*(
-name 
-
-"
-conv2d_dilations_0_
-const
-conv2d_groups_0
-*%
-name
-
-"
-conv2d_groups_0*
-val
-
-
-f
-const
-x_to_fp16_dtype_0
-*'
-name
-
-"
-x_to_fp16_dtype_0*
-val
-
-
-"
-fp16¿
-const:
-p_model_0_weight_to_fp16
-
-
-@
-
-
-*.
-name&
-
-"
-p_model_0_weight_to_fp16*K
-valD
-
-
-@
-
-
-*"
-@model_path/weights/weight.bin@ô
-const&
-p_model_0_bias_to_fp16
-
-
-
-@*:
-val3
-
-
-
-@*#
-@model_path/weights/weight.binÄ*,
-name$
-
-"
-p_model_0_bias_to_fp16}
-cast
-dtype
-
-x_to_fp16_dtype_0
-
-x
-
-x+
-	x_to_fp16
-
-
-
-
-2
-2*
-name
-
-
-"
-cast_1„
-conv"
-bias
-
-p_model_0_bias_to_fp16!
-pad_type
-
-conv2d_pad_type_0
-x
-
-	x_to_fp16
-strides
-
-conv2d_strides_0
-groups
-
-conv2d_groups_0#
-	dilations
-
-conv2d_dilations_0
-pad
-
-conv2d_pad_0&
-weight
-
-p_model_0_weight_to_fp162
-conv2d_cast_fp16
-
-
-
-@
-2
-2*&
-name
-
-"
-conv2d_cast_fp16y
-relu
-x
-
-conv2d_cast_fp160
-relu_cast_fp16
-
-
-
-@
-2
-2*$
-name
-
-"
-relu_cast_fp16l
-const
-conv2d_1_pad_type_0
-*)
-name!
-
-"
-conv2d_1_pad_type_0*
-val
-
-
-"
-customp
-const
-conv2d_1_pad_0
-
-
-*!
-val
-
-
-
-
-
-*$
-name
-
-"
-conv2d_1_pad_0v
-const"
-conv2d_1_strides_0
-
-
-*(
-name 
-
-"
-conv2d_1_strides_0*
-val
-
-
-
-
-z
-const$
-conv2d_1_dilations_0
-
-
-**
-name"
-
-"
-conv2d_1_dilations_0*
-val
-
-
-
-
-c
-const
-conv2d_1_groups_0
-*
-val
-
-
-*'
-name
-
-"
-conv2d_1_groups_0±
-const2
-const_79_to_fp16
-
-
-@
-@
-
-*&
-name
-
-"
-const_79_to_fp16*L
-valE
-
-
-@
-@
-
-*#
-@model_path/weights/weight.bin¿é
-const 
-const_80_to_fp16
-
-
-
-@*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄﬁ*&
-name
-
-"
-const_80_to_fp16†
-conv!
-strides
-
-conv2d_1_strides_0%
-	dilations
-
-conv2d_1_dilations_0
-x
-
-relu_cast_fp16#
-pad_type
-
-conv2d_1_pad_type_0
-weight
-
-const_79_to_fp16
-bias
-
-const_80_to_fp16
-groups
-
-conv2d_1_groups_0
-pad
-
-conv2d_1_pad_0P
-._native_batch_norm_legit_no_training_cast_fp16
-
-
-
-@
-2
-2*D
-name<
-4
-2"0
-._native_batch_norm_legit_no_training_cast_fp16õ
-relu7
-x2
-0
-._native_batch_norm_legit_no_training_cast_fp162
-relu_1_cast_fp16
-
-
-
-@
-2
-2*&
-name
-
-"
-relu_1_cast_fp16l
-const
-conv2d_2_pad_type_0
-*)
-name!
-
-"
-conv2d_2_pad_type_0*
-val
-
-
-"
-customp
-const
-conv2d_2_pad_0
-
-
-*!
-val
-
-
-
-
-
-*$
-name
-
-"
-conv2d_2_pad_0v
-const"
-conv2d_2_strides_0
-
-
-*
-val
-
-
-
-
-*(
-name 
-
-"
-conv2d_2_strides_0z
-const$
-conv2d_2_dilations_0
-
-
-**
-name"
-
-"
-conv2d_2_dilations_0*
-val
-
-
-
-
-c
-const
-conv2d_2_groups_0
-*
-val
-
-
-*'
-name
-
-"
-conv2d_2_groups_0≤
-const2
-const_81_to_fp16
-
-
-@
-@
-
-*&
-name
-
-"
-const_81_to_fp16*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿ﬂé
-const 
-const_82_to_fp16
-
-
-
-@*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄ†	*&
-name
-
-"
-const_82_to_fp16¶
-conv
-pad
-
-conv2d_2_pad_0
-weight
-
-const_81_to_fp16!
-strides
-
-conv2d_2_strides_0%
-	dilations
-
-conv2d_2_dilations_0#
-pad_type
-
-conv2d_2_pad_type_0
-groups
-
-conv2d_2_groups_0
-bias
-
-const_82_to_fp16
-x
-
-relu_1_cast_fp16R
-0_native_batch_norm_legit_no_training_1_cast_fp16
-
-
-
-@
-2
-2*F
-name>
-6
-4"2
-0_native_batch_norm_legit_no_training_1_cast_fp16ù
-relu9
-x4
-2
-0_native_batch_norm_legit_no_training_1_cast_fp162
-relu_2_cast_fp16
-
-
-
-@
-2
-2*&
-name
-
-"
-relu_2_cast_fp16l
-const
-conv2d_3_pad_type_0
-*
-val
-
-
-"
-custom*)
-name!
-
-"
-conv2d_3_pad_type_0p
-const
-conv2d_3_pad_0
-
-
-*$
-name
-
-"
-conv2d_3_pad_0*!
-val
-
-
-
-
-
-v
-const"
-conv2d_3_strides_0
-
-
-*
-val
-
-
-
-
-*(
-name 
-
-"
-conv2d_3_strides_0z
-const$
-conv2d_3_dilations_0
-
-
-**
-name"
-
-"
-conv2d_3_dilations_0*
-val
-
-
-
-
-c
-const
-conv2d_3_groups_0
-*
-val
-
-
-*'
-name
-
-"
-conv2d_3_groups_0≤
-const2
-const_83_to_fp16
-
-
-@
-@
-
-*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿°	*&
-name
-
-"
-const_83_to_fp16é
-const 
-const_84_to_fp16
-
-
-
-@*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄ‚*&
-name
-
-"
-const_84_to_fp16¶
-conv
-groups
-
-conv2d_3_groups_0
-pad
-
-conv2d_3_pad_0
-x
-
-relu_2_cast_fp16#
-pad_type
-
-conv2d_3_pad_type_0
-bias
-
-const_84_to_fp16
-weight
-
-const_83_to_fp16!
-strides
-
-conv2d_3_strides_0%
-	dilations
-
-conv2d_3_dilations_0R
-0_native_batch_norm_legit_no_training_2_cast_fp16
-
-
-
-@
-2
-2*F
-name>
-6
-4"2
-0_native_batch_norm_legit_no_training_2_cast_fp16ù
-relu9
-x4
-2
-0_native_batch_norm_legit_no_training_2_cast_fp162
-relu_3_cast_fp16
-
-
-
-@
-2
-2*&
-name
-
-"
-relu_3_cast_fp16l
-const
-conv2d_4_pad_type_0
-*
-val
-
-
-"
-custom*)
-name!
-
-"
-conv2d_4_pad_type_0p
-const
-conv2d_4_pad_0
-
-
-*$
-name
-
-"
-conv2d_4_pad_0*!
-val
-
-
-
-
-
-v
-const"
-conv2d_4_strides_0
-
-
-*
-val
-
-
-
-
-*(
-name 
-
-"
-conv2d_4_strides_0z
-const$
-conv2d_4_dilations_0
-
-
-*
-val
-
-
-
-
-**
-name"
-
-"
-conv2d_4_dilations_0c
-const
-conv2d_4_groups_0
-*
-val
-
-
-*'
-name
-
-"
-conv2d_4_groups_0≤
-const2
-const_85_to_fp16
-
-
-@
-@
-
-*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿„*&
-name
-
-"
-const_85_to_fp16é
-const 
-const_86_to_fp16
-
-
-
-@*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄ§*&
-name
-
-"
-const_86_to_fp16¶
-conv#
-pad_type
-
-conv2d_4_pad_type_0
-groups
-
-conv2d_4_groups_0
-pad
-
-conv2d_4_pad_0%
-	dilations
-
-conv2d_4_dilations_0
-bias
-
-const_86_to_fp16!
-strides
-
-conv2d_4_strides_0
-x
-
-relu_3_cast_fp16
-weight
-
-const_85_to_fp16R
-0_native_batch_norm_legit_no_training_3_cast_fp16
-
-
-
-@
-2
-2*F
-name>
-6
-4"2
-0_native_batch_norm_legit_no_training_3_cast_fp16ù
-relu9
-x4
-2
-0_native_batch_norm_legit_no_training_3_cast_fp162
-relu_4_cast_fp16
-
-
-
-@
-2
-2*&
-name
-
-"
-relu_4_cast_fp16l
-const
-conv2d_5_pad_type_0
-*)
-name!
-
-"
-conv2d_5_pad_type_0*
-val
-
-
-"
-customp
-const
-conv2d_5_pad_0
-
-
-*$
-name
-
-"
-conv2d_5_pad_0*!
-val
-
-
-
-
-
-v
-const"
-conv2d_5_strides_0
-
-
-*
-val
-
-
-
-
-*(
-name 
-
-"
-conv2d_5_strides_0z
-const$
-conv2d_5_dilations_0
-
-
-*
-val
-
-
-
-
-**
-name"
-
-"
-conv2d_5_dilations_0c
-const
-conv2d_5_groups_0
-*'
-name
-
-"
-conv2d_5_groups_0*
-val
-
-
-≤
-const2
-const_87_to_fp16
-
-
-@
-@
-
-*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿•*&
-name
-
-"
-const_87_to_fp16é
-const 
-const_88_to_fp16
-
-
-
-@*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄÊ*&
-name
-
-"
-const_88_to_fp16¶
-conv
-weight
-
-const_87_to_fp16%
-	dilations
-
-conv2d_5_dilations_0
-pad
-
-conv2d_5_pad_0
-groups
-
-conv2d_5_groups_0!
-strides
-
-conv2d_5_strides_0
-x
-
-relu_4_cast_fp16
-bias
-
-const_88_to_fp16#
-pad_type
-
-conv2d_5_pad_type_0R
-0_native_batch_norm_legit_no_training_4_cast_fp16
-
-
-
-@
-2
-2*F
-name>
-6
-4"2
-0_native_batch_norm_legit_no_training_4_cast_fp16ù
-relu9
-x4
-2
-0_native_batch_norm_legit_no_training_4_cast_fp162
-relu_5_cast_fp16
-
-
-
-@
-2
-2*&
-name
-
-"
-relu_5_cast_fp16l
-const
-conv2d_6_pad_type_0
-*)
-name!
-
-"
-conv2d_6_pad_type_0*
-val
-
-
-"
-customp
-const
-conv2d_6_pad_0
-
-
-*$
-name
-
-"
-conv2d_6_pad_0*!
-val
-
-
-
-
-
-v
-const"
-conv2d_6_strides_0
-
-
-*(
-name 
-
-"
-conv2d_6_strides_0*
-val
-
-
-
-
-z
-const$
-conv2d_6_dilations_0
-
-
-*
-val
-
-
-
-
-**
-name"
-
-"
-conv2d_6_dilations_0c
-const
-conv2d_6_groups_0
-*
-val
-
-
-*'
-name
-
-"
-conv2d_6_groups_0≤
-const2
-const_89_to_fp16
-
-
-@
-@
-
-*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿Á*&
-name
-
-"
-const_89_to_fp16é
-const 
-const_90_to_fp16
-
-
-
-@*&
-name
-
-"
-const_90_to_fp16*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄ®¶
-conv%
-	dilations
-
-conv2d_6_dilations_0#
-pad_type
-
-conv2d_6_pad_type_0!
-strides
-
-conv2d_6_strides_0
-bias
-
-const_90_to_fp16
-x
-
-relu_5_cast_fp16
-weight
-
-const_89_to_fp16
-groups
-
-conv2d_6_groups_0
-pad
-
-conv2d_6_pad_0R
-0_native_batch_norm_legit_no_training_5_cast_fp16
-
-
-
-@
-2
-2*F
-name>
-6
-4"2
-0_native_batch_norm_legit_no_training_5_cast_fp16ù
-relu9
-x4
-2
-0_native_batch_norm_legit_no_training_5_cast_fp162
-relu_6_cast_fp16
-
-
-
-@
-2
-2*&
-name
-
-"
-relu_6_cast_fp16l
-const
-conv2d_7_pad_type_0
-*
-val
-
-
-"
-custom*)
-name!
-
-"
-conv2d_7_pad_type_0p
-const
-conv2d_7_pad_0
-
-
-*!
-val
-
-
-
-
-
-*$
-name
-
-"
-conv2d_7_pad_0v
-const"
-conv2d_7_strides_0
-
-
-*
-val
-
-
-
-
-*(
-name 
-
-"
-conv2d_7_strides_0z
-const$
-conv2d_7_dilations_0
-
-
-*
-val
-
-
-
-
-**
-name"
-
-"
-conv2d_7_dilations_0c
-const
-conv2d_7_groups_0
-*'
-name
-
-"
-conv2d_7_groups_0*
-val
-
-
-≤
-const2
-const_91_to_fp16
-
-
-@
-@
-
-*&
-name
-
-"
-const_91_to_fp16*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿©é
-const 
-const_92_to_fp16
-
-
-
-@*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄÍ*&
-name
-
-"
-const_92_to_fp16¶
-conv!
-strides
-
-conv2d_7_strides_0
-bias
-
-const_92_to_fp16#
-pad_type
-
-conv2d_7_pad_type_0
-groups
-
-conv2d_7_groups_0
-weight
-
-const_91_to_fp16
-pad
-
-conv2d_7_pad_0
-x
-
-relu_6_cast_fp16%
-	dilations
-
-conv2d_7_dilations_0R
-0_native_batch_norm_legit_no_training_6_cast_fp16
-
-
-
-@
-2
-2*F
-name>
-6
-4"2
-0_native_batch_norm_legit_no_training_6_cast_fp16ù
-relu9
-x4
-2
-0_native_batch_norm_legit_no_training_6_cast_fp162
-relu_7_cast_fp16
-
-
-
-@
-2
-2*&
-name
-
-"
-relu_7_cast_fp16l
-const
-conv2d_8_pad_type_0
-*
-val
-
-
-"
-custom*)
-name!
-
-"
-conv2d_8_pad_type_0p
-const
-conv2d_8_pad_0
-
-
-*!
-val
-
-
-
-
-
-*$
-name
-
-"
-conv2d_8_pad_0v
-const"
-conv2d_8_strides_0
-
-
-*
-val
-
-
-
-
-*(
-name 
-
-"
-conv2d_8_strides_0z
-const$
-conv2d_8_dilations_0
-
-
-*
-val
-
-
-
-
-**
-name"
-
-"
-conv2d_8_dilations_0c
-const
-conv2d_8_groups_0
-*'
-name
-
-"
-conv2d_8_groups_0*
-val
-
-
-≤
-const2
-const_93_to_fp16
-
-
-@
-@
-
-*&
-name
-
-"
-const_93_to_fp16*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿Îé
-const 
-const_94_to_fp16
-
-
-
-@*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄ¨$*&
-name
-
-"
-const_94_to_fp16¶
-conv!
-strides
-
-conv2d_8_strides_0%
-	dilations
-
-conv2d_8_dilations_0
-weight
-
-const_93_to_fp16
-pad
-
-conv2d_8_pad_0
-x
-
-relu_7_cast_fp16
-bias
-
-const_94_to_fp16
-groups
-
-conv2d_8_groups_0#
-pad_type
-
-conv2d_8_pad_type_0R
-0_native_batch_norm_legit_no_training_7_cast_fp16
-
-
-
-@
-2
-2*F
-name>
-6
-4"2
-0_native_batch_norm_legit_no_training_7_cast_fp16ù
-relu9
-x4
-2
-0_native_batch_norm_legit_no_training_7_cast_fp162
-relu_8_cast_fp16
-
-
-
-@
-2
-2*&
-name
-
-"
-relu_8_cast_fp16l
-const
-conv2d_9_pad_type_0
-*
-val
-
-
-"
-custom*)
-name!
-
-"
-conv2d_9_pad_type_0p
-const
-conv2d_9_pad_0
-
-
-*!
-val
-
-
-
-
-
-*$
-name
-
-"
-conv2d_9_pad_0v
-const"
-conv2d_9_strides_0
-
-
-*(
-name 
-
-"
-conv2d_9_strides_0*
-val
-
-
-
-
-z
-const$
-conv2d_9_dilations_0
-
-
-*
-val
-
-
-
-
-**
-name"
-
-"
-conv2d_9_dilations_0c
-const
-conv2d_9_groups_0
-*
-val
-
-
-*'
-name
-
-"
-conv2d_9_groups_0≤
-const2
-const_95_to_fp16
-
-
-@
-@
-
-*&
-name
-
-"
-const_95_to_fp16*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿≠$é
-const 
-const_96_to_fp16
-
-
-
-@*&
-name
-
-"
-const_96_to_fp16*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄÓ(¶
-conv
-weight
-
-const_95_to_fp16
-pad
-
-conv2d_9_pad_0#
-pad_type
-
-conv2d_9_pad_type_0%
-	dilations
-
-conv2d_9_dilations_0!
-strides
-
-conv2d_9_strides_0
-groups
-
-conv2d_9_groups_0
-bias
-
-const_96_to_fp16
-x
-
-relu_8_cast_fp16R
-0_native_batch_norm_legit_no_training_8_cast_fp16
-
-
-
-@
-2
-2*F
-name>
-6
-4"2
-0_native_batch_norm_legit_no_training_8_cast_fp16ù
-relu9
-x4
-2
-0_native_batch_norm_legit_no_training_8_cast_fp162
-relu_9_cast_fp16
-
-
-
-@
-2
-2*&
-name
-
-"
-relu_9_cast_fp16n
-const
-conv2d_10_pad_type_0
-**
-name"
-
-"
-conv2d_10_pad_type_0*
-val
-
-
-"
-customr
-const
-conv2d_10_pad_0
-
-
-*!
-val
-
-
-
-
-
-*%
-name
-
-"
-conv2d_10_pad_0x
-const#
-conv2d_10_strides_0
-
-
-*
-val
-
-
-
-
-*)
-name!
-
-"
-conv2d_10_strides_0|
-const%
-conv2d_10_dilations_0
-
-
-*+
-name#
-
-"
-conv2d_10_dilations_0*
-val
-
-
-
-
-e
-const
-conv2d_10_groups_0
-*
-val
-
-
-*(
-name 
-
-"
-conv2d_10_groups_0≤
-const2
-const_97_to_fp16
-
-
-@
-@
-
-*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿Ô(*&
-name
-
-"
-const_97_to_fp16é
-const 
-const_98_to_fp16
-
-
-
-@*&
-name
-
-"
-const_98_to_fp16*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄ∞-´
-conv$
-pad_type
-
-conv2d_10_pad_type_0
-bias
-
-const_98_to_fp16"
-strides
-
-conv2d_10_strides_0
-x
-
-relu_9_cast_fp16
-pad
-
-conv2d_10_pad_0 
-groups
-
-conv2d_10_groups_0&
-	dilations
-
-conv2d_10_dilations_0
-weight
-
-const_97_to_fp16R
-0_native_batch_norm_legit_no_training_9_cast_fp16
-
-
-
-@
-2
-2*F
-name>
-6
-4"2
-0_native_batch_norm_legit_no_training_9_cast_fp16ü
-relu9
-x4
-2
-0_native_batch_norm_legit_no_training_9_cast_fp163
-relu_10_cast_fp16
-
-
-
-@
-2
-2*'
-name
-
-"
-relu_10_cast_fp16n
-const
-conv2d_11_pad_type_0
-*
-val
-
-
-"
-custom**
-name"
-
-"
-conv2d_11_pad_type_0r
-const
-conv2d_11_pad_0
-
-
-*%
-name
-
-"
-conv2d_11_pad_0*!
-val
-
-
-
-
-
-x
-const#
-conv2d_11_strides_0
-
-
-*)
-name!
-
-"
-conv2d_11_strides_0*
-val
-
-
-
-
-|
-const%
-conv2d_11_dilations_0
-
-
-*+
-name#
-
-"
-conv2d_11_dilations_0*
-val
-
-
-
-
-e
-const
-conv2d_11_groups_0
-*(
-name 
-
-"
-conv2d_11_groups_0*
-val
-
-
-≤
-const2
-const_99_to_fp16
-
-
-@
-@
-
-*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿±-*&
-name
-
-"
-const_99_to_fp16ê
-const!
-const_100_to_fp16
-
-
-
-@*'
-name
-
-"
-const_100_to_fp16*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄÚ1Ø
-conv 
-groups
-
-conv2d_11_groups_0
-x
-
-relu_10_cast_fp16"
-strides
-
-conv2d_11_strides_0$
-pad_type
-
-conv2d_11_pad_type_0
-weight
-
-const_99_to_fp16
-pad
-
-conv2d_11_pad_0&
-	dilations
-
-conv2d_11_dilations_0
-bias
-
-const_100_to_fp16S
-1_native_batch_norm_legit_no_training_10_cast_fp16
-
-
-
-@
-2
-2*G
-name?
-7
-5"3
-1_native_batch_norm_legit_no_training_10_cast_fp16†
-relu:
-x5
-3
-1_native_batch_norm_legit_no_training_10_cast_fp163
-relu_11_cast_fp16
-
-
-
-@
-2
-2*'
-name
-
-"
-relu_11_cast_fp16n
-const
-conv2d_12_pad_type_0
-**
-name"
-
-"
-conv2d_12_pad_type_0*
-val
-
-
-"
-customr
-const
-conv2d_12_pad_0
-
-
-*%
-name
-
-"
-conv2d_12_pad_0*!
-val
-
-
-
-
-
-x
-const#
-conv2d_12_strides_0
-
-
-*)
-name!
-
-"
-conv2d_12_strides_0*
-val
-
-
-
-
-|
-const%
-conv2d_12_dilations_0
-
-
-*+
-name#
-
-"
-conv2d_12_dilations_0*
-val
-
-
-
-
-e
-const
-conv2d_12_groups_0
-*
-val
-
-
-*(
-name 
-
-"
-conv2d_12_groups_0¥
-const3
-const_101_to_fp16
-
-
-@
-@
-
-*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿Û1*'
-name
-
-"
-const_101_to_fp16ê
-const!
-const_102_to_fp16
-
-
-
-@*'
-name
-
-"
-const_102_to_fp16*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄ¥6∞
-conv
-pad
-
-conv2d_12_pad_0
-weight
-
-const_101_to_fp16$
-pad_type
-
-conv2d_12_pad_type_0&
-	dilations
-
-conv2d_12_dilations_0 
-groups
-
-conv2d_12_groups_0
-x
-
-relu_11_cast_fp16"
-strides
-
-conv2d_12_strides_0
-bias
-
-const_102_to_fp16S
-1_native_batch_norm_legit_no_training_11_cast_fp16
-
-
-
-@
-2
-2*G
-name?
-7
-5"3
-1_native_batch_norm_legit_no_training_11_cast_fp16†
-relu:
-x5
-3
-1_native_batch_norm_legit_no_training_11_cast_fp163
-relu_12_cast_fp16
-
-
-
-@
-2
-2*'
-name
-
-"
-relu_12_cast_fp16n
-const
-conv2d_13_pad_type_0
-**
-name"
-
-"
-conv2d_13_pad_type_0*
-val
-
-
-"
-customr
-const
-conv2d_13_pad_0
-
-
-*!
-val
-
-
-
-
-
-*%
-name
-
-"
-conv2d_13_pad_0x
-const#
-conv2d_13_strides_0
-
-
-*)
-name!
-
-"
-conv2d_13_strides_0*
-val
-
-
-
-
-|
-const%
-conv2d_13_dilations_0
-
-
-*+
-name#
-
-"
-conv2d_13_dilations_0*
-val
-
-
-
-
-e
-const
-conv2d_13_groups_0
-*(
-name 
-
-"
-conv2d_13_groups_0*
-val
-
-
-¥
-const3
-const_103_to_fp16
-
-
-@
-@
-
-*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿µ6*'
-name
-
-"
-const_103_to_fp16ê
-const!
-const_104_to_fp16
-
-
-
-@*'
-name
-
-"
-const_104_to_fp16*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄˆ:∞
-conv 
-groups
-
-conv2d_13_groups_0
-weight
-
-const_103_to_fp16
-bias
-
-const_104_to_fp16
-pad
-
-conv2d_13_pad_0&
-	dilations
-
-conv2d_13_dilations_0$
-pad_type
-
-conv2d_13_pad_type_0
-x
-
-relu_12_cast_fp16"
-strides
-
-conv2d_13_strides_0S
-1_native_batch_norm_legit_no_training_12_cast_fp16
-
-
-
-@
-2
-2*G
-name?
-7
-5"3
-1_native_batch_norm_legit_no_training_12_cast_fp16†
-relu:
-x5
-3
-1_native_batch_norm_legit_no_training_12_cast_fp163
-relu_13_cast_fp16
-
-
-
-@
-2
-2*'
-name
-
-"
-relu_13_cast_fp16n
-const
-conv2d_14_pad_type_0
-**
-name"
-
-"
-conv2d_14_pad_type_0*
-val
-
-
-"
-customr
-const
-conv2d_14_pad_0
-
-
-*%
-name
-
-"
-conv2d_14_pad_0*!
-val
-
-
-
-
-
-x
-const#
-conv2d_14_strides_0
-
-
-*)
-name!
-
-"
-conv2d_14_strides_0*
-val
-
-
-
-
-|
-const%
-conv2d_14_dilations_0
-
-
-*
-val
-
-
-
-
-*+
-name#
-
-"
-conv2d_14_dilations_0e
-const
-conv2d_14_groups_0
-*
-val
-
-
-*(
-name 
-
-"
-conv2d_14_groups_0¥
-const3
-const_105_to_fp16
-
-
-@
-@
-
-*'
-name
-
-"
-const_105_to_fp16*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿˜:ê
-const!
-const_106_to_fp16
-
-
-
-@*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄ∏?*'
-name
-
-"
-const_106_to_fp16∞
-conv&
-	dilations
-
-conv2d_14_dilations_0 
-groups
-
-conv2d_14_groups_0
-pad
-
-conv2d_14_pad_0$
-pad_type
-
-conv2d_14_pad_type_0
-x
-
-relu_13_cast_fp16"
-strides
-
-conv2d_14_strides_0
-weight
-
-const_105_to_fp16
-bias
-
-const_106_to_fp16S
-1_native_batch_norm_legit_no_training_13_cast_fp16
-
-
-
-@
-2
-2*G
-name?
-7
-5"3
-1_native_batch_norm_legit_no_training_13_cast_fp16†
-relu:
-x5
-3
-1_native_batch_norm_legit_no_training_13_cast_fp163
-relu_14_cast_fp16
-
-
-
-@
-2
-2*'
-name
-
-"
-relu_14_cast_fp16n
-const
-conv2d_15_pad_type_0
-*
-val
-
-
-"
-custom**
-name"
-
-"
-conv2d_15_pad_type_0r
-const
-conv2d_15_pad_0
-
-
-*!
-val
-
-
-
-
-
-*%
-name
-
-"
-conv2d_15_pad_0x
-const#
-conv2d_15_strides_0
-
-
-*
-val
-
-
-
-
-*)
-name!
-
-"
-conv2d_15_strides_0|
-const%
-conv2d_15_dilations_0
-
-
-*
-val
-
-
-
-
-*+
-name#
-
-"
-conv2d_15_dilations_0e
-const
-conv2d_15_groups_0
-*(
-name 
-
-"
-conv2d_15_groups_0*
-val
-
-
-¥
-const3
-const_107_to_fp16
-
-
-@
-@
-
-*'
-name
-
-"
-const_107_to_fp16*M
-valF
-
-
-@
-@
-
-*$
-@model_path/weights/weight.bin¿π?ê
-const!
-const_108_to_fp16
-
-
-
-@*'
-name
-
-"
-const_108_to_fp16*;
-val4
-
-
-
-@*$
-@model_path/weights/weight.binÄ˙C∞
-conv&
-	dilations
-
-conv2d_15_dilations_0$
-pad_type
-
-conv2d_15_pad_type_0 
-groups
-
-conv2d_15_groups_0"
-strides
-
-conv2d_15_strides_0
-bias
-
-const_108_to_fp16
-weight
-
-const_107_to_fp16
-pad
-
-conv2d_15_pad_0
-x
-
-relu_14_cast_fp16S
-1_native_batch_norm_legit_no_training_14_cast_fp16
-
-
-
-@
-2
-2*G
-name?
-7
-5"3
-1_native_batch_norm_legit_no_training_14_cast_fp16†
-relu:
-x5
-3
-1_native_batch_norm_legit_no_training_14_cast_fp163
-relu_15_cast_fp16
-
-
-
-@
-2
-2*'
-name
-
-"
-relu_15_cast_fp16n
-const
-conv2d_16_pad_type_0
-**
-name"
-
-"
-conv2d_16_pad_type_0*
-val
-
-
-"
-customr
-const
-conv2d_16_pad_0
-
-
-*%
-name
-
-"
-conv2d_16_pad_0*!
-val
-
-
-
-
-
-x
-const#
-conv2d_16_strides_0
-
-
-*
-val
-
-
-
-
-*)
-name!
-
-"
-conv2d_16_strides_0|
-const%
-conv2d_16_dilations_0
-
-
-*
-val
-
-
-
-
-*+
-name#
-
-"
-conv2d_16_dilations_0e
-const
-conv2d_16_groups_0
-*
-val
-
-
-*(
-name 
-
-"
-conv2d_16_groups_0ƒ
-const;
-p_model_47_weight_to_fp16
-
-
-
-@
-
-*M
-valF
-
-
-
-@
-
-*$
-@model_path/weights/weight.bin¿˚C*/
-name'
-
-"
-p_model_47_weight_to_fp16Ñ
-const'
-p_model_47_bias_to_fp16
-
-
-
-*-
-name%
-
-"
-p_model_47_bias_to_fp16*#
-val
-
-
-
-
-
-:
-ﬂ5KÇ
-conv'
-weight
-
-p_model_47_weight_to_fp16"
-strides
-
-conv2d_16_strides_0#
-bias
-
-p_model_47_bias_to_fp16 
-groups
-
-conv2d_16_groups_0$
-pad_type
-
-conv2d_16_pad_type_0&
-	dilations
-
-conv2d_16_dilations_0
-x
-
-relu_15_cast_fp16
-pad
-
-conv2d_16_pad_05
-conv2d_16_cast_fp16
-
-
-
-
-2
-2*)
-name!
-
-"
-conv2d_16_cast_fp16ç
-sub
-y
-
-conv2d_16_cast_fp16
-x
-
-	x_to_fp16/
-sub_cast_fp16
-
-
-
-
-2
-2*#
-name
-
-"
-sub_cast_fp16~
-const%
-sub_cast_fp16_to_fp32_dtype_0
-*
-val
-
-
-"
-fp32*3
-name+
-#
-!"
-sub_cast_fp16_to_fp32_dtype_0è
-cast
-x
-
-sub_cast_fp16*
-dtype!
-
-sub_cast_fp16_to_fp32_dtype_0%
-sub
-
-
-
-2
-2*
-name
-
-
-"
-cast_0"Ò
-	buildInfo„"
-
-
-–"Õ
-6
-!
-
-"
-coremltools-version
-	
-"
-8.1
-F
-)
-!
-"
-coremltools-component-torch
-
-"
-2.5.1+cu124
-K
-(
- 
-"
-coremltools-source-dialect
-
-"
-TorchExport::ATEN

@@ -126,6 +126,13 @@ struct DenoisingView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 300)
                                 .overlay(Text("Denoised Image").foregroundColor(.white).background(Color.black.opacity(0.6)), alignment: .top)
+                                .contextMenu {
+                                    Button(action: {
+                                        UIImageWriteToSavedPhotosAlbum(denoised, nil, nil, nil)
+                                    }) {
+                                        Label("Save to Photos", systemImage: "square.and.arrow.down")
+                                    }
+                                }
                             Text(processingTime)
                                 .font(.caption)
                                 .foregroundColor(.gray)

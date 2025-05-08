@@ -33,7 +33,17 @@ struct ColorizerView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxHeight: 256)
-                    .overlay(Text("Colorized").foregroundColor(.white).background(Color.black.opacity(0.6)), alignment: .top)
+                    .overlay(Text("Colorized")
+                        .foregroundColor(.white)
+                        .background(Color.black.opacity(0.6)),
+                        alignment: .top)
+                    .contextMenu {
+                        Button(action: {
+                            UIImageWriteToSavedPhotosAlbum(colorizedImage, nil, nil, nil)
+                        }) {
+                            Label("Save to Photos", systemImage: "square.and.arrow.down")
+                        }
+                    }
             }
 
             if let time = inferenceTime {
@@ -85,13 +95,22 @@ struct ColorizerView: View {
             return
         }
 
-        do {
-            coreModel = try MLModel(contentsOf: url)
-            print("Model loaded from bundle.")
-        } catch {
-            print("Failed to load model: \(error)")
+        // Rulăm încărcarea modelului pe un thread de fundal
+        DispatchQueue.global(qos: .background).async {
+            do {
+                let model = try MLModel(contentsOf: url)
+                DispatchQueue.main.async {
+                    self.coreModel = model
+                    print("Model loaded from bundle.")
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    print("Failed to load model: \(error)")
+                }
+            }
         }
     }
+
 
     func runModel(on image: UIImage, with model: MLModel) -> UIImage? {
         guard let resizedImage = image.resize(to: CGSize(width: 256, height: 256)),

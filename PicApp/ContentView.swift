@@ -17,7 +17,7 @@ struct ContentView: View {
 
                 
                 // Button for Colorization
-                NavigationLink(destination: ColorizerView()) {
+                NavigationLink(destination: ColorizerViewDis()) {
                     FunctionalityButton(
                         imageName: "image-colorizer",
                         title: "Colorization",
@@ -28,7 +28,7 @@ struct ContentView: View {
                 Spacer()
             }
             .padding()
-            .navigationTitle("Choose AI action")
+            .navigationTitle("Choose AI edit")
         }
                 
     }

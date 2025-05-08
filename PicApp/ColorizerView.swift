@@ -24,7 +24,7 @@ struct ColorizerView: View {
                 Image(uiImage: originalImage)
                     .resizable()
                     .scaledToFit()
-                    .frame(maxHeight: 250)
+                    .frame(maxHeight: 256)
                     .overlay(Text("Original").foregroundColor(.white).background(Color.black.opacity(0.6)), alignment: .top)
             }
 
@@ -32,12 +32,12 @@ struct ColorizerView: View {
                 Image(uiImage: colorizedImage)
                     .resizable()
                     .scaledToFit()
-                    .frame(maxHeight: 250)
+                    .frame(maxHeight: 256)
                     .overlay(Text("Colorized").foregroundColor(.white).background(Color.black.opacity(0.6)), alignment: .top)
             }
 
             if let time = inferenceTime {
-                Text(String(format: "Elapsed time: %.2f ms", time))
+                Text(String(format: "Elapsed time: %.2f s", time))
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
@@ -51,7 +51,7 @@ struct ColorizerView: View {
                         let start = CFAbsoluteTimeGetCurrent()
                         colorizedImage = runModel(on: image, with: model)
                         let end = CFAbsoluteTimeGetCurrent()
-                        inferenceTime = (end - start) * 1000 // in ms
+                        inferenceTime = (end - start)
                     }
                 }
                 .disabled(originalImage == nil || coreModel == nil)
@@ -62,7 +62,9 @@ struct ColorizerView: View {
             }
         }
         .onAppear {
-            loadModel()
+            Task {
+                    await loadModelAsync()
+                }
         }
         .onChange(of: selectedItem) {
             Task {
@@ -77,7 +79,7 @@ struct ColorizerView: View {
         }
     }
 
-    func loadModel() {
+    func loadModelAsync() async {
         guard let url = Bundle.main.url(forResource: "colorizer_model", withExtension: "mlmodelc") else {
             print("Model .mlmodelc not found in bundle.")
             return

@@ -1,12 +1,9 @@
 import SwiftUI
 
-import SwiftUI
-
 struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                // Button for Denoising
                 NavigationLink(destination: DenoisingView()) {
                     FunctionalityButton(
                         imageName: "image-denoising",
@@ -15,28 +12,35 @@ struct ContentView: View {
                     )
                 }
 
-                
-                // Button for Colorization
-                NavigationLink(destination: ColorizerViewDis()) {
+                NavigationLink(destination: ColorizerView()) {
                     FunctionalityButton(
                         imageName: "image-colorizer",
                         title: "Colorization",
                         description: "Bring back to life your old images."
                     )
                 }
-
                 Spacer()
+
+                VStack(spacing: 4) {
+                    Text("© 2025 Banaru Mircea-Sebastian. Developed as part of the Master's thesis at the University Politehnica of Bucharest.")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+
+                    Text("Version \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0")")
+                        .font(.caption2)
+                        .foregroundColor(.gray)
+                }
+                .padding(.bottom, 10)
+
             }
             .padding()
             .navigationTitle("Choose AI edit")
         }
-                
     }
 }
     
-                
-
-
 struct FunctionalityButton: View {
     let imageName: String
     let title: String
